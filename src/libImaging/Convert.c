@@ -1623,7 +1623,7 @@ convert(Imaging imOut, Imaging imIn, const char *mode,
         return (Imaging) ImagingError_ValueError("conversion not supported");
 #else
         static char buf[100];
-        sprintf(buf, "conversion from %.10s to %.10s not supported", imIn->mode, mode);
+        snprintf(buf, 100, "conversion from %.10s to %.10s not supported", imIn->mode, mode);
         return (Imaging)ImagingError_ValueError(buf);
 #endif
 
@@ -1679,8 +1679,9 @@ ImagingConvertTransparent(Imaging imIn, const char *mode,
 #else
     {
         static char buf[100];
-        sprintf(
+        snprintf(
             buf,
+            100,
             "conversion from %.10s to %.10s not supported in convert_transparent",
             imIn->mode,
             mode);
