@@ -1622,9 +1622,11 @@ convert(Imaging imOut, Imaging imIn, const char *mode,
 #ifdef notdef
         return (Imaging) ImagingError_ValueError("conversion not supported");
 #else
-        static char buf[100];
-        snprintf(buf, 100, "conversion from %.10s to %.10s not supported", imIn->mode, mode);
-        return (Imaging)ImagingError_ValueError(buf);
+    {
+      static char buf[100];
+      snprintf(buf, 100, "conversion from %.10s to %.10s not supported", imIn->mode, mode);
+      return (Imaging)ImagingError_ValueError(buf);
+    }
 #endif
 
     imOut = ImagingNew2Dirty(mode, imOut, imIn);
