@@ -1,7 +1,7 @@
 import os
 
-SF_MIRROR = "http://iweb.dl.sourceforge.net"
 PILLOW_DEPENDS_DIR = "C:\\pillow-depends\\"
+GITHUB_DEPENDS_URL = "https://github.com/python-pillow/pillow-depends/blob/master/"
 
 pythons = {
     "27": {"compiler": 7, "vc": 2010},
@@ -32,7 +32,7 @@ libs = {
         "dir": "jpeg-9c",
     },
     "tiff": {
-        "url": "ftp://download.osgeo.org/libtiff/tiff-4.0.10.tar.gz",
+        "url": "https://download.osgeo.org/libtiff/tiff-4.0.10.tar.gz",
         "filename": PILLOW_DEPENDS_DIR + "tiff-4.0.10.tar.gz",
         "dir": "tiff-4.0.10",
     },
@@ -42,7 +42,7 @@ libs = {
         "dir": "freetype-2.10.1",
     },
     "lcms": {
-        "url": SF_MIRROR + "/project/lcms/lcms/2.7/lcms2-2.7.zip",
+        "url": GITHUB_DEPENDS_URL + "lcms2-2.7.zip",
         "filename": PILLOW_DEPENDS_DIR + "lcms2-2.7.zip",
         "dir": "lcms2-2.7",
     },
@@ -52,23 +52,23 @@ libs = {
         "dir": "ghostscript-9.27",
     },
     "tcl-8.5": {
-        "url": SF_MIRROR + "/project/tcl/Tcl/8.5.19/tcl8519-src.zip",
+        "url": GITHUB_DEPENDS_URL + "tcl8519-src.zip",
         "filename": PILLOW_DEPENDS_DIR + "tcl8519-src.zip",
         "dir": "",
     },
     "tk-8.5": {
-        "url": SF_MIRROR + "/project/tcl/Tcl/8.5.19/tk8519-src.zip",
+        "url": GITHUB_DEPENDS_URL + "tk8519-src.zip",
         "filename": PILLOW_DEPENDS_DIR + "tk8519-src.zip",
         "dir": "",
         "version": "8.5.19",
     },
     "tcl-8.6": {
-        "url": SF_MIRROR + "/project/tcl/Tcl/8.6.9/tcl869-src.zip",
+        "url": GITHUB_DEPENDS_URL + "tcl869-src.zip",
         "filename": PILLOW_DEPENDS_DIR + "tcl869-src.zip",
         "dir": "",
     },
     "tk-8.6": {
-        "url": SF_MIRROR + "/project/tcl/Tcl/8.6.9/tk869-src.zip",
+        "url": GITHUB_DEPENDS_URL + "tk869-src.zip",
         "filename": PILLOW_DEPENDS_DIR + "tk869-src.zip",
         "dir": "",
         "version": "8.6.9",
