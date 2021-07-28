@@ -5,12 +5,12 @@ GITHUB_DEPENDS_URL = "https://github.com/python-pillow/pillow-depends/blob/maste
 
 pythons = {
     "27": {"compiler": 7, "vc": 2010},
-    "pypy2": {"compiler": 7, "vc": 2010},
-    "35": {"compiler": 7.1, "vc": 2015},
-    "36": {"compiler": 7.1, "vc": 2015},
-    "pypy3": {"compiler": 7.1, "vc": 2015},
-    "37": {"compiler": 7.1, "vc": 2015},
-    "38": {"compiler": 7.1, "vc": 2015},
+    # "pypy2": {"compiler": 7, "vc": 2010},
+    # "35": {"compiler": 7.1, "vc": 2015},
+    # "36": {"compiler": 7.1, "vc": 2015},
+    # "pypy3": {"compiler": 7.1, "vc": 2015},
+    # "37": {"compiler": 7.1, "vc": 2015},
+    # "38": {"compiler": 7.1, "vc": 2015},
 }
 
 VIRT_BASE = "c:/vp/"
