@@ -158,19 +158,6 @@ def main(op):
             )
         )
 
-        scripts.append(
-            (
-                "%s%s" % (py_version, X64_EXT),
-                "\n".join(
-                    [
-                        header(op),
-                        build_one("%sx64" % py_version, py_compilers[64], 64),
-                        footer(),
-                    ]
-                ),
-            )
-        )
-
     results = map(run_script, scripts)
 
     for (version, status, trace, err) in results:
