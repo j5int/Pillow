@@ -111,9 +111,9 @@ def build_one(py_ver, compiler, bit):
         args["tcl_ver"] = "86"
 
     if compiler["vc_version"] == "2015":
-        args["imaging_libs"] = " build_ext --add-imaging-libs=msvcrt"
+        args["imaging_libs"] = " build_ext --disable-jpeg2000 --add-imaging-libs=msvcrt"
     else:
-        args["imaging_libs"] = ""
+        args["imaging_libs"] = "build_ext --disable-jpeg2000"
 
     args["vc_setup"] = vc_setup(compiler, bit)
 
@@ -154,19 +154,6 @@ def main(op):
                 py_version,
                 "\n".join(
                     [header(op), build_one(py_version, py_compilers[32], 32), footer()]
-                ),
-            )
-        )
-
-        scripts.append(
-            (
-                "%s%s" % (py_version, X64_EXT),
-                "\n".join(
-                    [
-                        header(op),
-                        build_one("%sx64" % py_version, py_compilers[64], 64),
-                        footer(),
-                    ]
                 ),
             )
         )
