@@ -1,6 +1,6 @@
 Follow the steps in winbuild.rst with the following adustments:
 1. If the downloading of the dependencies fails, adjust the requests call to add header to stop it getting blocked as a blob.
-3. Install Visual Studio C++ extension for 9.0, 1.0, 12.0 and 14.0 (TBC which are actually required)
+3. Install Visual Studio C++ extension for 9.0, 10.0, 12.0 and 14.0 (TBC which are actually required)
 5. After running `build_deps.py`, which will fail, - adjust build-deps.cmd batch script with the following:
     - add "set VCTargetsPath=C:\Program Files (x86)\MSBuild\Microsoft.Cpp\4.0\V140" on line 14
     - change "v7.0" to "v7.1" on line 26 (now 27) for the SetEnv.cmd file
