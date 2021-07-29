@@ -1,7 +1,7 @@
 import os
 
 PILLOW_DEPENDS_DIR = "C:\\pillow-depends\\"
-GITHUB_DEPENDS_URL = "https://github.com/python-pillow/pillow-depends/blob/master/"
+GITHUB_DEPENDS_URL = "https://github.com/python-pillow/pillow-depends/raw/master/"
 
 pythons = {
     "27": {"compiler": 7, "vc": 2010},
